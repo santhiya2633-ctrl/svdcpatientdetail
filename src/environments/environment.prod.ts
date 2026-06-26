@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://your-api.onrender.com'
+  apiUrl: 'https://svdcdata-btjj.vercel.app/'
 };
