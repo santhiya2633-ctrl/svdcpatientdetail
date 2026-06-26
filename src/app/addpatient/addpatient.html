@@ -1,0 +1,125 @@
+<form [formGroup]="_form" (ngSubmit)="savePatient()">
+
+    <mat-card>
+        <mat-card-header>
+            <div class="header">
+                <h1>{{title}}</h1>
+                <button mat-raised-button color="primary" (click)="goBack()" type="button">Back</button>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="mat-50">
+                <mat-label>Branch</mat-label>
+                <input name="branch" matInput formControlName="branch">
+            </mat-form-field>
+            <mat-form-field class="mat-50">
+                <mat-label>Patient Id</mat-label>
+                <input name="patientId" matInput formControlName="patientId">
+            </mat-form-field>
+            <mat-form-field class="mat-50">
+                <mat-label>Patient Name</mat-label>
+                <input name="patientName" matInput formControlName="patientName">
+            </mat-form-field>
+            <mat-form-field class="mat-50">
+                <mat-label>Age</mat-label>
+                <input name="age" matInput formControlName="age">
+            </mat-form-field>
+            <mat-form-field class="mat-50">
+                <mat-label>Gender</mat-label>
+                <input name="gender" matInput formControlName="gender">
+            </mat-form-field>
+            <mat-form-field class="mat-50">
+                <mat-label>Mobile Number</mat-label>
+                <input name="mobileNumber" matInput formControlName="mobileNumber">
+            </mat-form-field>
+            <mat-form-field class="mat-50">
+                <mat-label>Address</mat-label>
+                <input name="address" matInput formControlName="address">
+            </mat-form-field>
+
+            <div formArrayName="treatment">
+                <div class="header">
+                    <h1>Treatment Details</h1>
+                    <a mat-stroked-button="outlined" (click)="addTreatmentHistory()">Add Treatment</a>
+                </div>
+                @for (item of treatmentHistory.controls; track $index; let i = $index) {
+                <mat-card [formGroupName]="i">
+                    <mat-card-header>
+                        <div>
+                            <h2>Treatment Details - {{i+1}}</h2>
+                        </div>
+                        <a mat-raised-button color="warn" style="margin-left: auto;" (click)="removePatient(i)">Remove</a>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <mat-form-field>
+                            <mat-label>Date</mat-label>
+                            <input name="date" matInput formControlName="date">
+                        </mat-form-field><br>
+                        <mat-form-field>
+                            <mat-label>Chief Complaint</mat-label>
+                            <input name="chiefComplaint" matInput formControlName="chiefComplaint">
+                        </mat-form-field> <br>
+                        <mat-form-field>
+                            <mat-label>Dental History</mat-label>
+                            <textarea name="dentalHistory" matInput formControlName="dentalHistory" rows="3"> </textarea>
+                        </mat-form-field><br>
+                        <mat-form-field>
+                            <mat-label>Medical History</mat-label>
+                            <textarea name="medicalHistory" matInput formControlName="medicalHistory" rows="3"> </textarea>
+                        </mat-form-field> <br>
+                        <mat-form-field>
+                            <mat-label>Habits</mat-label>
+                            <textarea name="habits" matInput formControlName="habits" rows="2"> </textarea>
+                        </mat-form-field> <br>
+                        <mat-form-field>
+                            <mat-label>Allergy</mat-label>
+                            <textarea name="allergy" matInput formControlName="allergy" rows="2"> </textarea>
+                        </mat-form-field> <br>
+                        <mat-form-field>
+                            <mat-label>Clinical Examination</mat-label>
+                            <textarea name="onExamination" matInput formControlName="onExamination" rows="3"></textarea>
+                        </mat-form-field> <br>
+                        <mat-form-field>
+                            <mat-label>X-Ray</mat-label>
+                            <textarea name="isXray" matInput formControlName="isXray" rows="3"></textarea>
+                        </mat-form-field> <br>
+                        <mat-form-field>
+                            <mat-label>Diagnosis</mat-label>
+                            <textarea name="diagnosis" matInput formControlName="diagnosis" rows="3"></textarea>
+                        </mat-form-field> <br>
+                        <mat-form-field>
+                            <mat-label>Treatment Plan</mat-label>
+                            <textarea name="treatmentAdvised" matInput formControlName="treatmentAdvised" rows="3"></textarea>
+                        </mat-form-field> <br>
+                        <mat-form-field>
+                            <mat-label>Patient Remark</mat-label>
+                            <textarea name="patientRemark" matInput formControlName="patientRemark" rows="3"> </textarea>
+                        </mat-form-field> <br>
+                          <mat-form-field>
+                            <mat-label>Treatment Done</mat-label>
+                            <textarea name="treatmentDone" matInput formControlName="treatmentDone" rows="3"> </textarea>
+                        </mat-form-field> <br>
+                        <mat-form-field>
+                            <mat-label>Prescription</mat-label>
+
+                            <textarea matInput name="prescription" formControlName="prescription" rows="3">
+  </textarea>
+
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Payment</mat-label>
+                            <input name="payment" matInput formControlName="payment">
+                        </mat-form-field>
+                    </mat-card-content>
+                </mat-card>
+                }
+
+
+
+            </div>
+             <div class="header">
+                <button mat-raised-button color="primary" style="margin-left: auto;" type="submit">Save Patient</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</form>
