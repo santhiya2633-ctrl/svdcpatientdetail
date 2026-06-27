@@ -1,0 +1,119 @@
+{
+  "patients": [
+    {
+      "branch": "Valliyur",
+      "patientId": "SVV0001",
+      "patientName": "Santhiya",
+      "age": "20",
+      "gender": "Female",
+      "mobileNumber": "7550375831",
+      "address": "Valliyur",
+      "treatment": [
+        {
+          "date": "20-06-2026",
+          "chiefComplaint": "nill",
+          "dentalHistory": "nill",
+          "medicalHistory": "nill",
+          "onExamination": "nill",
+          "isXray": "asdlfh",
+          "diagnosis": "nill",
+          "treatmentAdvised": "nill",
+          "patientRemark": "nill",
+          "treatmentDone": "yess",
+          "prescription": "nill",
+          "payment": "Done"
+        }
+      ],
+      "id": "4iQDVm8_mYw"
+    },
+    {
+      "branch": "Valliyur",
+      "patientId": "SVV0002",
+      "patientName": "SAGAR",
+      "age": "80",
+      "gender": "Other",
+      "mobileNumber": "968234713",
+      "address": "Vall",
+      "treatment": [],
+      "id": "KJu9LtR8BT4"
+    },
+    {
+      "branch": "Valliyur",
+      "patientId": "SVV0003",
+      "patientName": "SAGAR santhiya",
+      "age": "29",
+      "gender": "Male",
+      "mobileNumber": "7324585845",
+      "address": "Valliyur",
+      "treatment": [
+        {
+          "date": "20-06-2026",
+          "chiefComplaint": "asdf",
+          "dentalHistory": "asdfsdf",
+          "medicalHistory": "2345\nasdf\nasdf\nasdf\nasdf\nsd\nfsd\nf\ndasdfasdfsdfasdfsadfsadfasdfsdfsdfasdfsadfasdfsadfasdfasdfdsf",
+          "onExamination": "rew",
+          "isXray": "dsfas",
+          "diagnosis": "ertyeryretyertyerty",
+          "treatmentAdvised": "ertyertyret",
+          "patientRemark": "asfsadfsd",
+          "treatmentDone": null,
+          "prescription": "asdfasdf wertyuioi gjfgfasfsdaf sdfs dfsdfsadfsdf sdfsdfsdfasdfasdfasdfsdfsdfsdf df.  dfasdf sdf sdfsdfsdf sd fsdfsdfdfsdfdsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfdsafasdfasdfasdfasdfsdfsdfsdfsdfsdfsdfsdfsdfsdfdfsdfasdfasdfasdfsdfasdfsdfdfsdfsdfdsf",
+          "payment": "asdfasdf"
+        }
+      ],
+      "id": "_6ShGalWV30"
+    },
+    {
+      "branch": "Valliyur",
+      "patientId": "SVV0004",
+      "patientName": "San",
+      "age": "27",
+      "gender": "Female",
+      "mobileNumber": "7550375831",
+      "address": "Valliyur",
+      "treatment": [
+        {
+          "date": "23-06-2026",
+          "chiefComplaint": "Okkkk",
+          "dentalHistory": "Fine",
+          "medicalHistory": "ok",
+          "habits": null,
+          "allergy": null,
+          "onExamination": "ok",
+          "isXray": "noooo",
+          "diagnosis": "nothing",
+          "treatmentAdvised": "consultation",
+          "patientRemark": "RCT",
+          "treatmentDone": "done",
+          "prescription": "nill",
+          "payment": "done"
+        },
+        {
+          "date": "23-06-2026",
+          "chiefComplaint": "asdf",
+          "dentalHistory": "sdasdf\nsadf\nsadf",
+          "medicalHistory": "dfsaf\nds",
+          "habits": "sdf",
+          "allergy": "sfd",
+          "onExamination": "sadf",
+          "isXray": "sdfa",
+          "diagnosis": "sdaf",
+          "treatmentAdvised": "sdafasdfasdf",
+          "patientRemark": "fdfasdf",
+          "treatmentDone": "dfsadf",
+          "prescription": "sdfas",
+          "payment": "dfasdf"
+        }
+      ],
+      "id": "5d_40f2xxYQ"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

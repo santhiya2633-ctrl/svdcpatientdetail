@@ -1,0 +1,29 @@
+.mat-card{
+    width: 90%;
+    margin: 2% 0 0 5%;
+}
+
+mat-form-field{
+    width: 98%;
+    margin: 0%;
+}
+
+.mat-50{
+    width: 30%;
+    margin: 1%;
+}
+.mat-30{
+    width: 46.5%;
+    margin: 1%;
+}
+.mat-25{
+    width: 95%;
+    margin: 1%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2%;
+    width: 98%;
+}

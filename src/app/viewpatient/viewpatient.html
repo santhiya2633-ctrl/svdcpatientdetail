@@ -1,0 +1,149 @@
+@if (editdata) {
+
+<mat-card>
+
+  <mat-card-header style="display:flex; align-items:center;">
+    <h2 style="margin-left: auto;">{{ title }}</h2>
+
+    <button mat-raised-button color="primary" (click)="goBack()" style="margin-left: auto;">
+      Back
+    </button>
+  </mat-card-header>
+
+  <hr>
+
+  <!-- 🔥 GRID START -->
+  <mat-card-content style="padding:20px;">
+
+    <div style="
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      ">
+
+      <div>
+        <strong>Branch:</strong> {{ editdata.branch }}<br>
+
+      </div>
+
+      <div>
+        <strong>Patient Id:</strong> {{ editdata.patientId }}<br>
+
+      </div>
+
+      <div>
+        <strong>Patient Name:</strong> {{ editdata.patientName }}<br>
+
+      </div>
+
+      <div>
+        <strong>Age:</strong> {{ editdata.age }} <br>
+
+      </div>
+      <div>
+        <strong>Gender:</strong> {{ editdata.gender }} <br>
+
+      </div>
+
+      <div>
+        <strong>Mobile Number:</strong> {{ editdata.mobileNumber }}<br>
+
+      </div>
+
+      <div>
+        <strong>Address:</strong> {{ editdata.address }}<br>
+
+      </div>
+
+    </div>
+
+    <hr>
+
+    <h3>Treatment</h3>
+
+    @if (editdata.treatment.length > 0) {
+
+    @for (item of editdata.treatment; track $index) {
+
+    <div style="margin-bottom:15px; padding:15px; border:1px solid #ccc; border-radius:8px;">
+
+      <div style="
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 15px;
+            ">
+
+        <div>
+          <b>Date:</b> {{ item.date }}<br>
+
+        </div>
+        <div>
+          <b>Chief Complaint:</b> {{ item.chiefComplaint }}<br>
+
+        </div>
+        <div>
+          <b>Dental History:</b> {{ item.dentalHistory }}<br>
+
+        </div>
+        <div>
+          <b>Medical History:</b> {{ item.medicalHistory }}<br>
+
+        </div>
+        <div>
+          <b>On Examination:</b> {{ item.onExamination }}<br>
+
+        </div>
+        <div>
+          <b>X-Ray:</b> {{ item.isXray }}<br>
+
+        </div>
+        
+        <div>
+          <b>Diagnosis:</b>{{ item.diagnosis }}<br>
+
+        </div>
+        <div>
+          <b>Treatment Advised</b> {{ item.treatmentAdvised }}<br>
+
+        </div>
+        <div>
+          <b>Patient Remark:</b> {{ item.patientRemark }}<br>
+
+        </div>
+        <div>
+          <b>Treatment Done:</b> {{ item.treatmentDone }}<br>
+
+        </div>
+        <div>
+          <b>Prescription:</b> {{ item.prescription }}<br>
+
+        </div>
+<div>
+          <b>Payment:</b> {{ item.payment }}<br>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    }
+
+    } @else {
+
+    <p>No treatment data</p>
+
+    }
+
+  </mat-card-content>
+<button mat-raised-button color="accent"
+        (click)="downloadPDF(editdata)">
+  Download PDF
+</button>
+</mat-card>
+
+} @else {
+
+<p>Loading data...</p>
+
+}
